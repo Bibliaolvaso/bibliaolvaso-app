@@ -1,10 +1,10 @@
 {
   "name": "ember-app-kit",
   "dependencies": {
-    "ember": "http://builds.emberjs.com/stable/ember.js",
-    "ember-prod": "http://builds.emberjs.com/stable/ember.prod.js",
+    "ember": "1.0.0",
+    "ember-data": "ember-data-shim#1.0.0-beta.2",
     "handlebars": "1.0.0",
-    "jquery": "~1.9.1",
+    "jquery": "~2.0.3",
     "qunit": "~1.12.0"
   }
 }
