@@ -1,5 +1,5 @@
 {
-  "name": "ember-app-kit",
+  "name": "bibliaolvaso",
   "dependencies": {
     "ember": "1.0.0",
     "ember-data": "ember-data-shim#1.0.0-beta.2",

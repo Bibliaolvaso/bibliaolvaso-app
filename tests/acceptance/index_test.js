@@ -1,5 +1,5 @@
-import Index from 'appkit/routes/index';
-import App from 'appkit/app';
+import Index from 'bibliaolvaso/routes/index';
+import App from 'bibliaolvaso/app';
 
 module("Acceptances - Index", {
   setup: function(){

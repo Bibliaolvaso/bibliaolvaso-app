@@ -1,6 +1,6 @@
 {
-  "name": "app-kit",
-  "namespace": "appkit",
+  "name": "bibliaolvaso",
+  "namespace": "bibliaolvaso",
   "version": "0.0.0",
   "main": "index.js",
   "directories": {
@@ -14,9 +14,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/stefanpenner/app-kit.git"
+    "url": "git://github.com/lackac/bibliaolvaso.git"
   },
-  "author": "",
+  "author": "Laszlo Bacsi",
   "license": "BSD",
   "devDependencies": {
     "grunt-contrib-connect": "~0.3.0",
