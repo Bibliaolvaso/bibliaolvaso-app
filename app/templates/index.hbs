@@ -1,9 +1,6 @@
 <h3>{{abbr}}</h3>
-<ul>
+<div>
 {{#each verses}}
-  {{#if title}}
-  {{else}}
-    <li><b>{{n}}</b> {{text}}</li>
-  {{/if}}
+  {{bible-verse n=n title=title text=text}}
 {{/each}}
-</ul>
+</div>

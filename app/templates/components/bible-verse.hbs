@@ -1,0 +1,12 @@
+{{#if title}}
+  {{#if isTitleInMiddle}}
+    <div class="verse-text"><b>{{n}}</b> {{textBeforeTitle}}</div>
+    <div class="verse-title"><h4>{{title}}</h4></div>
+    <div class="verse-text">{{textAfterTitle}} </div>
+  {{else}}
+    <div class="verse-title"><h4>{{title}}</h4></div>
+    <div class="verse-text"><b>{{n}}</b> {{text}}</div>
+  {{/if}}
+{{else}}
+  <div class="verse-text"><b>{{n}}</b> {{text}} </div>
+{{/if}}
