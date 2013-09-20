@@ -475,6 +475,6 @@ Chapter.FIXTURES = [
       }
     ]
   }
-]
+];
 
 export default Chapter;

@@ -2,7 +2,7 @@ var BibleVerseComponent = Ember.Component.extend({
   classNames: ['verse'],
 
   isTitleInMiddle: function() {
-    return this.get('text').indexOf('<title>') != -1;
+    return this.get('text').indexOf('<title>') !== -1;
   }.property('text'),
 
   textBeforeTitle: function() {
