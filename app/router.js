@@ -1,7 +1,5 @@
 var router = Ember.Router.map(function(){
-  // this.resource('posts', function() {
-  //   this.route('new');
-  // });
+  this.route('chapter', { path: '/:bible/:book/:chapter' });
 });
 
 export default router;
