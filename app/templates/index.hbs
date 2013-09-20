@@ -1,5 +1,9 @@
+<h3>{{abbr}}</h3>
 <ul>
-{{#each}}
-  <li>{{this}}</li>
+{{#each verses}}
+  {{#if title}}
+  {{else}}
+    <li><b>{{n}}</b> {{text}}</li>
+  {{/if}}
 {{/each}}
 </ul>

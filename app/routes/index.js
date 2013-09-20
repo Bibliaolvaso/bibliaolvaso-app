@@ -1,6 +1,6 @@
 var IndexRoute = Ember.Route.extend({
   model: function() {
-    return ['red', 'yellow', 'blue'];
+    return this.store.find('chapter', 'ujforditas_19023');
   }
 });
 
