@@ -5,6 +5,7 @@
     "ember-data": "ember-data-shim#1.0.0-beta.2",
     "handlebars": "1.0.0",
     "jquery": "~2.0.3",
-    "qunit": "~1.12.0"
+    "qunit": "~1.12.0",
+    "reference": "*"
   }
 }
