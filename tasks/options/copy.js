@@ -35,8 +35,20 @@ module.exports = {
     }]
   },
   "vendor": {
-    src: ['vendor/**/*.js', 'vendor/**/*.css'],
-    dest: 'tmp/public/'
+    files: [{
+      expand: true,
+      cwd: 'vendor/',
+      src: [
+        'jquery/jquery.js',
+        'handlebars/handlebars.js',
+        'ember/ember.js',
+        'ember-data/ember-data.js',
+        'reference/dist/reference.js',
+        'loader.js'
+      ],
+      dest: 'tmp/public/vendor/',
+      flatten: true
+    }]
   },
   "dist": {
     files: [{
