@@ -54,7 +54,7 @@ function buildWildcardMiddleware(options) {
     fs.readFile(wildcardPath, function(err, data){
       if (err) { return next('ENOENT' == err.code ? null : err); }
 
-      response.writeHead(200, { 'Content-Type': 'text/html' });
+      response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
       response.end(data);
     });
   }

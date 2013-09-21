@@ -1,5 +1,5 @@
-var router = Ember.Router.map(function(){
+var map = function() {
   this.route('chapter', { path: '/:bible/:book/:chapter' });
-});
+};
 
-export default router;
+export default map;
