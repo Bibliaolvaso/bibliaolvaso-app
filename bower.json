@@ -1,6 +1,7 @@
 {
   "name": "bibliaolvaso",
   "dependencies": {
+    "bootstrap": "~3.0.0",
     "ember": "1.0.0",
     "ember-data": "ember-data-shim#1.0.0-beta.2",
     "handlebars": "1.0.0",
