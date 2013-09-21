@@ -1,0 +1,64 @@
+div.verses {
+
+  .verse {
+    line-height: 1.8em;
+  }
+
+  .verse-title h4 {
+    margin: 0.5em 0;
+    font-size: 1em;
+  }
+
+  .verse-text {
+    b {
+      display:          inline-block;
+      margin:           0 0.25em 0 0;
+      padding:          0 0.3em;
+      border-radius:    5px;
+      min-width:        1em;
+      height:           1.8em;
+      line-height:      1.8em;
+      text-align:       center;
+      font-size:        0.8em;
+      font-weight:      bold;
+      background-color: #DDD;
+    }
+  }
+
+  &.verses-continuous {
+    .verse, .verse-text {
+      display: inline;
+    }
+
+    .verse-title {
+      display: block;
+    }
+
+    .verse-text b {
+      min-width: 1em;
+      margin: 0;
+    }
+  }
+
+  &.verses-medium {
+    font-size: 1.1em;
+    .verse {
+      line-height: 1.6364em;
+      b {
+        height: 1.6364em;
+        line-height: 1.6364em;
+      }
+    }
+  }
+
+  &.verses-large {
+    font-size: 1.2em;
+    .verse {
+      line-height: 1.5em;
+      b {
+        height: 1.5em;
+        line-height: 1.5em;
+      }
+    }
+  }
+}
