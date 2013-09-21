@@ -48,6 +48,12 @@ module.exports = {
       ],
       dest: 'tmp/public/vendor/',
       flatten: true
+    }, {
+      expand: true,
+      cwd: 'vendor/',
+      src: 'bootstrap/dist/fonts/*',
+      dest: 'tmp/public/fonts/',
+      flatten: true
     }]
   },
   "dist": {
