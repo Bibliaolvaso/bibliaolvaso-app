@@ -1,16 +1,12 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
 # compiled output
-/dist
-/tmp
+dist/
+tmp/
 
 # dependencies
-/node_modules
-/vendor/*
-!/vendor/loader.js
+node_modules/
+vendor/*
+!vendor/loader.js
 
 # misc
-/.sass-cache
-/connect.lock
-/libpeerconnection.log
-.DS_Store
+.sass-cache/
+connect.lock
