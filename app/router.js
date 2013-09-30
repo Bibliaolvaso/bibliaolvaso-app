@@ -1,5 +1,5 @@
 var map = function() {
-  this.route('chapter', { path: '/:bible/:book/:chapter' });
+  this.route('chapter', { path: '/:translation/:book/:chapter' });
 };
 
 export default map;

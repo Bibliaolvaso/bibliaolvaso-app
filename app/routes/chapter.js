@@ -2,10 +2,10 @@ var ChapterRoute = Ember.Route.extend({
 
   beforeModel: function(transition) {
     var params = transition.params,
-        bible = params.bible, book = params.book, chapter = params.chapter,
+        translation = params.translation, book = params.book, chapter = params.chapter,
         abbr = book + ' ' + chapter,
-        path = '/' + [bible, book, chapter].join('/'),
-        ref = Reference.resolve(bible, abbr);
+        path = '/' + [translation, book, chapter].join('/'),
+        ref = Reference.resolve(translation, abbr);
 
     if (ref) {
       if (ref.path !== path) {
@@ -18,14 +18,14 @@ var ChapterRoute = Ember.Route.extend({
   },
 
   model: function(params) {
-    var ref = Reference.resolve(params.bible, params.book + ' ' + params.chapter);
+    var ref = Reference.resolve(params.translation, params.book + ' ' + params.chapter);
     return this.store.find('chapter', ref.chapter_id);
   },
 
   serialize: function(model) {
-    var ref = Reference.resolve(model.get('bible'), model.get('abbr'));
+    var ref = Reference.resolve(model.get('translation_id'), model.get('abbr'));
     return {
-      bible: ref.bible,
+      translation: ref.bible,
       book: ref.book.slugs[0],
       chapter: ref.chapter
     };
