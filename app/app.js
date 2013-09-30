@@ -7,7 +7,7 @@ var App = Ember.Application.create({
   LOG_TRANSITIONS:               true,
   //LOG_TRANSITIONS_INTERNAL:      false,
   LOG_VIEW_LOOKUPS:              true,
-  LOG_ACTIVE_GENERATION:         true
+  LOG_ACTIVE_GENERATION:         true,
   modulePrefix:                  'bibliaolvaso',
   Resolver:                      Resolver
 });
