@@ -13,15 +13,23 @@
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#" class="pager-link"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
         <li>
-          <div class="navbar-form" role="search">
+          <button {{action "previousChapter"}} {{bind-attr disabled="noPreviousChapter"}} id="prev-chapter" class="btn btn-link pager-link">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </button>
+        </li>
+        <li>
+          <div class="navbar-form">
             <div class="form-group">
-              {{input type="text" value=abbr class="form-control" action="query"}}
+              {{input type="text" value=abbr class="form-control" action="query" role="search"}}
             </div>
           </div>
         </li>
-        <li><a href="#" class="pager-link"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+        <li>
+          <button {{action "nextChapter"}} {{bind-attr disabled="noNextChapter"}} id="next-chapter" class="btn btn-link pager-link">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </button>
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fordítás <b class="caret"></b></a>
           <ul class="dropdown-menu">
