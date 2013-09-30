@@ -1,9 +1,11 @@
 var ApplicationController = Ember.Controller.extend({
   ref: Reference.resolve('ujforditas', '1Móz 1'),
 
-  abbr: function() {
-    return this.get('ref').abbr;
-  }.property('ref'),
+  abbr: '',
+
+  refChanged: function() {
+    this.set('abbr', this.get('ref').abbr);
+  }.observes('ref'),
 
   previousChapterPath: function() {
     var prev = this.get('ref').previousChapter();
