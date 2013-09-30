@@ -11,6 +11,8 @@ var ChapterRoute = Ember.Route.extend({
       if (ref.path !== path) {
         transition.abort();
         this.transitionTo(ref.path);
+      } else {
+        this.controllerFor('application').set('ref', ref);
       }
     } else {
       throw new Error("Chapter not found: " + path);
@@ -18,7 +20,7 @@ var ChapterRoute = Ember.Route.extend({
   },
 
   model: function(params) {
-    var ref = Reference.resolve(params.translation, params.book + ' ' + params.chapter);
+    var ref = this.controllerFor('application').get('ref');
     return this.store.find('chapter', ref.chapter_id);
   },
 

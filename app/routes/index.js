@@ -1,6 +1,7 @@
 var IndexRoute = Ember.Route.extend({
   redirect: function() {
-    this.transitionTo('/ujforditas/01/002');
+    var ref = this.controllerFor('application').get('ref');
+    this.transitionTo(ref.path);
   }
 });
 
