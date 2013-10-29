@@ -1,10 +1,21 @@
 var ApplicationController = Ember.Controller.extend({
+  translations: [
+    { id: 'ujforditas', title: 'Új fordítás' },
+    { id: 'karoli',     title: 'Károli' }
+  ],
   ref: Reference.resolve('ujforditas', '1Móz 1'),
 
+  translation: '',
   abbr: '',
 
+  translationChanged: function() {
+    this.send('query', this.get('abbr'));
+  }.observes('translation'),
+
   refChanged: function() {
-    this.set('abbr', this.get('ref').abbr);
+    var ref = this.get('ref');
+    this.set('translation', ref.bible);
+    this.set('abbr', ref.abbr);
   }.observes('ref'),
 
   previousChapterPath: function() {
@@ -28,7 +39,8 @@ var ApplicationController = Ember.Controller.extend({
   actions: {
     query: function(value) {
       var ref = this.get('ref'),
-          newRef = Reference.resolve(ref.bible, value);
+          translation = this.get('translation'),
+          newRef = Reference.resolve(translation, value);
 
       if (newRef) {
         if (newRef.path !== ref.path) {

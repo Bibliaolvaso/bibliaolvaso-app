@@ -30,12 +30,12 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
           </button>
         </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fordítás <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Újfordítás</a></li>
-            <li><a href="#">Károli</a></li>
-          </ul>
+        <li>
+          {{view Ember.Select
+                 contentBinding=translations
+                 optionValuePath="content.id"
+                 optionLabelPath="content.title"
+                 valueBinding=translation}}
         </li>
       </ul>
 
