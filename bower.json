@@ -2,11 +2,11 @@
   "name": "bibliaolvaso",
   "dependencies": {
     "bootstrap": "~3.0.0",
-    "ember": "1.0.0",
-    "ember-data": "ember-data-shim#1.0.0-beta.2",
+    "ember": "1.1.2",
+    "ember-data": "ember-data-shim#1.0.0-beta.3",
     "handlebars": "1.0.0",
     "jquery": "~2.0.3",
     "qunit": "~1.12.0",
-    "reference": "*"
+    "reference": "Bibliaolvaso/reference#0.0.2"
   }
 }
