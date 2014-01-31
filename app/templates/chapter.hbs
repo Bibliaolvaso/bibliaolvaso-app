@@ -1,6 +1,8 @@
-<h3>{{abbr}}</h3>
-<div class="verses verses-continuous verses-medium">
-{{#each verses}}
-  {{bible-verse n=n title=title text=text}}
-{{/each}}
+<div class="chapter">
+  <h3>{{book_title}} {{n}}</h3>
+  <div class="verses verses-continuous verses-medium">
+  {{#each verses}}
+    {{bible-verse n=n title=title text=text}}
+  {{/each}}
+  </div>
 </div>
