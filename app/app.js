@@ -19,7 +19,7 @@ App.Router.reopen({
 });
 
 App.ApplicationAdapter = DS.RESTAdapter.extend({
-  host: typeof DIST === 'undefined' ? 'http://bibliaolvaso-api.dev' : 'http://api.bibliaolvaso.hu'
+  host: typeof DIST === 'undefined' ? 'http://' + location.hostname.replace('bibliaolvaso', 'bibliaolvaso-api') : 'http://api.bibliaolvaso.hu'
 });
 
 export default App;
