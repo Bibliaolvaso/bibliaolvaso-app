@@ -1,7 +1,7 @@
 var ApplicationController = Ember.Controller.extend({
   translations: [
-    { id: 'ujforditas', title: 'Új fordítás' },
-    { id: 'karoli',     title: 'Károli' }
+    { id: 'ujforditas', title: 'Új fordítás', copyright: "Az 1975-ben megjelent, 1990-ben revideált új fordítású Biblia szövege. Felhasználása a Magyar Bibliatársulat engedélyével." },
+    { id: 'karoli', title: 'Károli', copyright: "Károli Gáspár 1590-ben megjelent fordításának 1908-ban revideált változata." }
   ],
   ref: Reference.resolve('ujforditas', '1Móz 1'),
 
@@ -11,6 +11,17 @@ var ApplicationController = Ember.Controller.extend({
   translationChanged: function() {
     this.send('query', this.get('abbr'));
   }.observes('translation'),
+
+  translationCopyright: function() {
+    var trId = this.get('translation'),
+        translations = this.get('translations');
+    for (var i = 0, _l = translations.length; i < _l; i++) {
+      var translation = translations[i];
+      if (translation.id === trId) {
+        return translation.copyright;
+      }
+    }
+  }.property('translation'),
 
   refChanged: function() {
     var ref = this.get('ref');
@@ -35,6 +46,8 @@ var ApplicationController = Ember.Controller.extend({
   noNextChapter: function() {
     return !this.get('nextChapterPath');
   }.property('nextChapterPath'),
+
+  currentYear: new Date().getFullYear(),
 
   actions: {
     query: function(value) {
